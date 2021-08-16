@@ -10,9 +10,11 @@
 		8060B13A26C8DB7F009E9FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B13926C8DB7F009E9FC8 /* AppDelegate.swift */; };
 		8060B13C26C8DB7F009E9FC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B13B26C8DB7F009E9FC8 /* SceneDelegate.swift */; };
 		8060B13E26C8DB7F009E9FC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B13D26C8DB7F009E9FC8 /* ViewController.swift */; };
-		8060B14126C8DB7F009E9FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8060B13F26C8DB7F009E9FC8 /* Main.storyboard */; };
 		8060B14326C8DB80009E9FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8060B14226C8DB80009E9FC8 /* Assets.xcassets */; };
 		8060B14626C8DB80009E9FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8060B14426C8DB80009E9FC8 /* LaunchScreen.storyboard */; };
+		8060B14E26C8DD78009E9FC8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B14D26C8DD78009E9FC8 /* ListViewController.swift */; };
+		8060B15026C8DE7F009E9FC8 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8060B14F26C8DE7F009E9FC8 /* NewViewController.swift */; };
+		80B6B97226CA264400AFE1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8060B13F26C8DB7F009E9FC8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8060B14226C8DB80009E9FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8060B14526C8DB80009E9FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8060B14726C8DB80009E9FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8060B14D26C8DD78009E9FC8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8060B14F26C8DE7F009E9FC8 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8060B14226C8DB80009E9FC8 /* Assets.xcassets */,
 				8060B14426C8DB80009E9FC8 /* LaunchScreen.storyboard */,
 				8060B14726C8DB80009E9FC8 /* Info.plist */,
+				8060B14D26C8DD78009E9FC8 /* ListViewController.swift */,
+				8060B14F26C8DE7F009E9FC8 /* NewViewController.swift */,
 			);
 			path = "spartacamp-practice-swift";
 			sourceTree = "<group>";
@@ -126,7 +132,7 @@
 			files = (
 				8060B14626C8DB80009E9FC8 /* LaunchScreen.storyboard in Resources */,
 				8060B14326C8DB80009E9FC8 /* Assets.xcassets in Resources */,
-				8060B14126C8DB7F009E9FC8 /* Main.storyboard in Resources */,
+				80B6B97226CA264400AFE1CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +145,8 @@
 			files = (
 				8060B13E26C8DB7F009E9FC8 /* ViewController.swift in Sources */,
 				8060B13A26C8DB7F009E9FC8 /* AppDelegate.swift in Sources */,
+				8060B15026C8DE7F009E9FC8 /* NewViewController.swift in Sources */,
+				8060B14E26C8DD78009E9FC8 /* ListViewController.swift in Sources */,
 				8060B13C26C8DB7F009E9FC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

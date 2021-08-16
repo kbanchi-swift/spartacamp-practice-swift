@@ -9,8 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        topImageView.image = UIImage(named: "top")
         // Do any additional setup after loading the view.
     }
 
