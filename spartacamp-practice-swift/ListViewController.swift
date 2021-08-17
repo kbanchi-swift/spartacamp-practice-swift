@@ -11,11 +11,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    var nameArray: [String] = []
+    var nameArray: [[String:Any]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // Do any additional setup after loading the view.
     }
     
@@ -23,15 +23,31 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         getAllItems()
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel!.text = self.nameArray[indexPath.row]
+        let id = self.nameArray[indexPath.row]["id"] as? Int
+        let name = self.nameArray[indexPath.row]["name"] as? String
+        cell.textLabel!.text = "\(id!) : \(name!)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "EditViewController", sender: self.nameArray[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditViewController" {
+            let editVC = segue.destination as! EditViewController
+            let item = sender as? [String : Any]
+            editVC.id = item!["id"] as! Int
+            editVC.name = item!["name"] as! String
+        }
     }
     
     func getAllItems() {
@@ -55,8 +71,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let count = items.count
                 // get name
                 for i in 0...count-1 {
+                    let id = items[i]["id"] as! Int
                     let name = items[i]["name"] as! String
-                    self.nameArray.append(name)
+                    self.nameArray.append([
+                        "id": id,
+                        "name": name
+                    ])
                 }
                 // reload table view
                 DispatchQueue.main.sync {
